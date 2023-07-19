@@ -6,11 +6,18 @@ import 'package:flutter/material.dart';
 void main() {
   runApp(
     MaterialApp(  // 머터리얼 디자인 위젯
+      debugShowCheckedModeBanner: false,
       home: Scaffold(   //scaffold 위젯
-        body: Center(
+        body: SizedBox(
+            width: double.infinity,
             // child 하나의 위젯만 가운데 정렬 가능
-            child: Text(     //Text 위젯
-          'Hello Code Factory', //마지막 매개변수 끝에 콤마 추가
+            child: Column(     //Text 위젯
+              mainAxisAlignment: MainAxisAlignment.center,
+              //여러 위젯을 Column 위젯에 입력 가능
+              children: [
+                Text('Code'),
+                Text('Factory'),
+              ],
         ),
       ),
     ),
